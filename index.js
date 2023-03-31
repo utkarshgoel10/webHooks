@@ -9,6 +9,10 @@ app.listen(PORT, () => {
 
 app.get('/', (req, res) => {
   res.send('Hey this is my API running 🥳')
+  console.log(res);
+  console.log(res.body);
+  console.log(req);
+  console.log(req.body);
 })
 
 app.get('/about', (req, res) => {
