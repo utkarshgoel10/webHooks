@@ -14,7 +14,14 @@ app.get('/', (req, res) => {
   console.log(req);
   console.log(req.body);
 })
-
+app.post('/', (req, res) => {
+  // Handle the webhook request here
+  console.log(req.body);  
+});
+app.get('/', (req, res) => {
+  // Handle the webhook request here
+  console.log(req.body);  
+});
 app.get('/about', (req, res) => {
   res.send('This is my about route..... ')
 })
