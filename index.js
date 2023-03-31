@@ -1,10 +1,19 @@
-const express = require('express');
-const app = express();
-app.post('/webhook', (req, res) => {
-    console.log(req.body);
-    // res.status(200).send('Webhook received');
-  });  
-  const server = app.listen(3000, () => {
-    console.log('Server listening on port 3000');
-  });
-  
+const express = require('express')
+
+const app = express()
+const PORT = 4000
+
+app.listen(PORT, () => {
+  console.log(`API listening on PORT ${PORT} `)
+})
+
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
+
+app.get('/about', (req, res) => {
+  res.send('This is my about route..... ')
+})
+
+// Export the Express API
+module.exports = app
